@@ -5,7 +5,7 @@ let instance = null;
 function render(props = {}) {
   const { container } = props;
   instance = createApp(App);
-  instance.mount(container ? container : '#app');
+  instance.mount(container ? container.querySelector('#app') : '#app');
 }
 
 // 独立运行时
